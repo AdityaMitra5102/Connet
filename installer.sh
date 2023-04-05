@@ -11,5 +11,6 @@ cd ~/Desktop
 echo cd ~/connet > connet.sh
 echo sudo java Runner >> connet.sh
 sudo chmod +x connet.sh
+clear
+echo Shortcut created on Desktop
 sudo ./connet.sh
-
