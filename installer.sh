@@ -16,5 +16,5 @@ sudo dpkg -i windscribe.deb
 clear
 banner connet
 echo Shortcut created on Desktop
+echo Run the command 'windscribe login' to set up VPN
 echo Create a VPN account on windscribe.com and enter your credentials here
-windscribe login
