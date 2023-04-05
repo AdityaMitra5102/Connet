@@ -31,17 +31,19 @@ class Runner
         }
         System.out.println("Do you want to restart network?(Y/n)");
         boolean rstrt=sc.nextLine().toLowerCase().charAt(0)=='y';
+        System.out.println("Do you want to use VPN?(Y/n)");
+        boolean vpn=sc.nextLine().toLowerCase().charAt(0)=='y';
         System.out.println("Enter interval in seconds");
         int sec=Integer.parseInt(sc.nextLine());
         while(true)
         {
-            System.out.println(exec(ob, choseninterface, flashmac, flaship, dhcp, rstrt));
+            System.out.println(exec(ob, choseninterface, flashmac, flaship, dhcp, rstrt, vpn));
             System.out.println("Waiting "+sec+" seconds");
             Thread.sleep(sec*1000);
         }
     }
 
-    String exec(Nets ob, Interf interf, boolean flashmac, boolean flaship, boolean dhcp, boolean rstrt) throws Exception
+    String exec(Nets ob, Interf interf, boolean flashmac, boolean flaship, boolean dhcp, boolean rstrt, boolean vpn) throws Exception
     {
         System.out.println("Starting flash");
         if(flashmac) ob.changeMac(interf);
@@ -51,6 +53,7 @@ class Runner
             else ob.changeIPStatic(interf);
         }
         if(rstrt) ob.restartNetwork(interf);
+        if(vpn) ob.startVPN();
         System.out.println("Flashed");
         ArrayList<Interf> arr=ob.getInterf();
         for(Interf x:arr)
