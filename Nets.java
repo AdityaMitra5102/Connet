@@ -75,4 +75,9 @@ class Nets {
         ec=Runtime.getRuntime().exec("sudo ifconfig "+inf.name+" up");
         ec.waitFor();
     }
+    void startVPN() throws Exception
+    {
+        Process ec=Runtime.getRuntime().exec("windscribe connect");
+        ec.waitFor();
+    }
 }  
