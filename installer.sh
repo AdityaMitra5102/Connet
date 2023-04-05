@@ -13,4 +13,4 @@ echo sudo java Runner >> connet.sh
 sudo chmod +x connet.sh
 clear
 echo Shortcut created on Desktop
-sudo ./connet.sh
+banner connet
