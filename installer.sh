@@ -1,8 +1,7 @@
 sudo apt-get update
-sudo apt-get install -y sysvbanner
+sudo apt-get install -y sysvbanner git macchanger net-tools default-jdk default-jre
 banner connet
 echo "Please click 'No' during macchanger installation, when it prompts for auto changing when interface is brought up"
-sudo apt-get install -y git macchanger net-tools default-jdk default-jre
 cd ~
 git clone https://github.com/AdityaMitra5102/connet
 sudo chmod -R 777 connet
