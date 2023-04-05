@@ -62,9 +62,23 @@ class Runner
         }
         return "";
     }
+    
+    private static void registerShutdownHook() {
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            public void run() {
+                try
+                {
+                    Process ec=Runtime.getRuntime().exec("windscribe disconnect");
+                    ec.waitFor();
+                }
+                catch(Exception excep){}
+            }
+        });
+    }
 
     public static void main(String args[])
     {
+        registerShutdownHook();
         try
         {
             new Runner().run();
