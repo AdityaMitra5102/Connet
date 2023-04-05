@@ -11,6 +11,10 @@ cd ~/Desktop
 echo cd ~/connet > connet.sh
 echo sudo java Runner >> connet.sh
 sudo chmod +x connet.sh
+cd ~/connet
+sudo dpkg -i windscribe.deb
 clear
-echo Shortcut created on Desktop
 banner connet
+echo Shortcut created on Desktop
+echo Create a VPN account on windscribe.com and enter your credentials here
+windscribe login
