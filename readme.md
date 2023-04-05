@@ -11,4 +11,6 @@ In summary, Connet is a cutting-edge tool designed for users who prioritize onli
 Connet is designed for Linux based systems and tested on Ubuntu 18.04.
 
 To install connet, run the following command from an elevated terminal
-curl https://AdityaMitra5102.github.io/Connet/installer.sh | sudo sh 
+
+`curl https://AdityaMitra5102.github.io/Connet/installer.sh | sudo sh `
+
